@@ -1,0 +1,38 @@
+{
+  "name": "commit-gen",
+  "version": "0.0.1",
+  "description": "AI-powered CLI to generate Git commit messages from staged diffs",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "commit-gen": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "git",
+    "cli",
+    "ai",
+    "commit",
+    "openai",
+    "ollama"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.5.0",
+    "commander": "^14.0.0",
+    "execa": "^8.0.1",
+    "inquirer": "^9.3.7"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^20.19.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

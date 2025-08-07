@@ -1,0 +1,12 @@
+# TypeScript build artifacts
+dist/
+*.tsbuildinfo
+
+# Node
+node_modules/
+.env
+.commitgenrc.json
+
+# OS
+.DS_Store
+Thumbs.db
