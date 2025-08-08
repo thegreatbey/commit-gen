@@ -1,5 +1,5 @@
 # commit-genie
-[![commit-gen logo](commit-genie.png)](https://github.com/thegreatbey/commit-gen)
+[![commit-genie logo](commit-genie.png)](https://github.com/thegreatbey/commit-gen)
 
 > Fast, local, AI-powered Git commit message generator.
 
@@ -27,22 +27,22 @@
 
 ---
 
-## Installation
+## Global Installation
 
 ```bash
-npm install -g commit-gen
+npm install -g @cavani21/commit-genie
 ````
 
 ## Usage
 
 ```bash
-npx commit-gen
+npx commit-genie
 
 # Or manually:
 git add .
-commit-gen                 # Generates a commit message from staged changes
-commit-gen --commit        # Also commits it
-commit-gen --conventional  # Format as Conventional Commit
+commit-genie                 # Generates a commit message from staged changes
+commit-genie --commit        # Also commits it
+commit-genie --conventional  # Format as Conventional Commit
 ```
 
 ---
