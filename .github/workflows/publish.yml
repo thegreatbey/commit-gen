@@ -7,6 +7,11 @@ on:
     tags:
       - 'v*.*.*'
 
+permissions:               # NEW (top-level)
+  contents: read           # checkout still needs this
+  id-token: write          # REQUIRED for npm --provenance
+
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
