@@ -1,6 +1,6 @@
 {
   "name": "commit-genie",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "description": "AI-powered CLI to generate Git commit messages from staged diffs",
   "main": "dist/index.js",
