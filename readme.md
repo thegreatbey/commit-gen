@@ -3,13 +3,13 @@
 
 > Fast, local, AI-powered Git commit message generator.
 
-[![npm version](https://img.shields.io/npm/v/commit-gen?color=blue)](https://www.npmjs.com/package/commit-gen)
-[![downloads](https://img.shields.io/npm/dt/commit-gen)](https://www.npmjs.com/package/commit-gen)
-[![license](https://img.shields.io/npm/l/commit-gen)](https://github.com/thegreatbey/commit-gen/blob/main/LICENSE)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/commit-gen)](https://bundlephobia.com/result?p=commit-gen)
-[![npm install](https://img.shields.io/badge/npm%20install--g%20commit--gen-blue.svg)](https://www.npmjs.com/package/commit-gen)
+[![npm version](https://img.shields.io/npm/v/@cavani21/commit-genie?color=blue)](https://www.npmjs.com/package/@cavani21/commit-genie)
+[![downloads](https://img.shields.io/npm/dt/@cavani21/commit-genie)](https://www.npmjs.com/package/@cavani21/commit-genie)
+[![license](https://img.shields.io/npm/l/@cavani21/commit-genie)](https://github.com/thegreatbey/commit-gen/blob/main/LICENSE)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@cavani21/commit-genie)](https://bundlephobia.com/result?p=@cavani21/commit-genie)
+[![npm install](https://img.shields.io/badge/npx%20@cavani21%2Fcommit--genie-blue.svg)](https://www.npmjs.com/package/@cavani21/commit-genie)
 [![CI](https://github.com/thegreatbey/commit-gen/actions/workflows/publish.yml/badge.svg)](https://github.com/thegreatbey/commit-gen/actions)
-[![npm provenance](https://img.shields.io/npm/v/commit-gen?label=signed&color=brightgreen&logo=npm)](https://docs.npmjs.com/generating-provenance-statements)
+[![provenance](https://img.shields.io/badge/provenance-signed-brightgreen?logo=npm)](https://docs.npmjs.com/generating-provenance-statements)
 
 ---
 
@@ -31,6 +31,9 @@
 
 ```bash
 npm install -g @cavani21/commit-genie
+# or
+npx @cavani21/commit-genie --help
+
 ````
 
 ## Usage
