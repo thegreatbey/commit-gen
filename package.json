@@ -1,11 +1,11 @@
 {
-  "name": "commit-genie",
+  "name": "@cavani21/commit-genie",
   "version": "0.0.5",
   "type": "module",
   "description": "AI-powered CLI to generate Git commit messages from staged diffs",
   "main": "dist/index.js",
   "bin": {
-    "commit-gen": "./dist/cli.js"
+    "commit-genie": "./dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
