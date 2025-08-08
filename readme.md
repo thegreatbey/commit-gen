@@ -1,5 +1,5 @@
-# commit-gen
-[![commit-gen logo](Commit-GenLogo.png)](https://github.com/thegreatbey/commit-gen)
+# commit-genie
+[![commit-gen logo](commit-genie.png)](https://github.com/thegreatbey/commit-gen)
 
 > Fast, local, AI-powered Git commit message generator.
 
