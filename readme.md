@@ -9,6 +9,7 @@
 [![bundle size](https://img.shields.io/bundlephobia/minzip/commit-gen)](https://bundlephobia.com/result?p=commit-gen)
 [![npm install](https://img.shields.io/badge/npm%20install--g%20commit--gen-blue.svg)](https://www.npmjs.com/package/commit-gen)
 [![CI](https://github.com/thegreatbey/commit-gen/actions/workflows/publish.yml/badge.svg)](https://github.com/thegreatbey/commit-gen/actions)
+[![npm provenance](https://img.shields.io/npm/v/commit-gen?label=signed&color=brightgreen&logo=npm)](https://docs.npmjs.com/generating-provenance-statements)
 
 ---
 
