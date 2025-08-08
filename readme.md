@@ -1,7 +1,7 @@
 # commit-genie
 [![commit-genie logo](commit-genie.png)](https://github.com/thegreatbey/commit-gen)
 
-> Fast, local, AI-powered Git commit message generator.
+> Fast, local, AI-powered Git commit message generator. Light weight (if a bit slow)
 
 [![npm version](https://img.shields.io/npm/v/@cavani21/commit-genie?color=blue)](https://www.npmjs.com/package/@cavani21/commit-genie)
 [![downloads](https://img.shields.io/npm/dt/@cavani21/commit-genie)](https://www.npmjs.com/package/@cavani21/commit-genie)
