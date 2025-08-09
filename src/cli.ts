@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import ora from 'ora';
 import chalk from 'chalk';
 import { Command } from 'commander';
@@ -9,30 +8,41 @@ import { generateCommitMessage } from './generator.js';
 import { formatMessage } from './formatter.js';
 import { runGitCommit } from './commit.js';
 import { ensureConfig } from './init.js';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const pkg = require('../package.json');
 
 // ---------------------------------------------------------------------------
 // Main CLI logic
 // ---------------------------------------------------------------------------
 export async function runCLI() {
+  // Clear previous commit message to avoid confusion
+  fs.writeFileSync('.commit-msg', '', 'utf8');
   await ensureConfig();
 
   const program = new Command()
-    .name('commit-gen')
+    .name('commit-genie')
+    .version(pkg.version)
+    .alias('commit-gen')
     .description('Generate Git commit messages using AI')
     .option('--commit', 'Auto-commit with the generated message')
     .option('--conventional', 'Use Conventional Commit format')
     .parse(process.argv);
 
   const options = program.opts();
-  const config  = loadConfig();
+  const config = loadConfig();
 
   const diff = await getStagedDiff();
+
   if (!diff) {
-    console.error(chalk.red('❌ No staged changes to commit.'));
+    const spinner = ora().fail('No staged changes found.');
+    console.log('Tip: Use `git add <file>` to stage changes first.');
     process.exit(1);
   }
 
-  // Spinner while talking to the model
   const spinner = ora(`Generating commit message with ${chalk.gray(config.model)} …`).start();
   let message: string;
 
@@ -52,12 +62,14 @@ export async function runCLI() {
   console.log('\n💬 Suggested Commit Message:\n');
   console.log(chalk.cyan(formatted));
 
-  try {
+try {
   fs.writeFileSync('.commit-msg', formatted, 'utf8');
   console.log(chalk.green('📝  Saved to .commit-msg (edit if you wish)'));
-  } catch (e) {
+  console.log(chalk.yellow('\nACCEPT AND COMMIT WITH ---> commit-genie --commit'));
+  console.log(chalk.gray('(PRO-TIP: YOU CAN SKIP REVIEW IF YOU USE ---> commit-genie --conventional --commit)\n'));
+} catch (e) {
   console.error(chalk.yellow('⚠️  Could not write .commit-msg:'), e);
-  }
+}
 
   if (options.commit) {
     await runGitCommit(formatted);
@@ -65,7 +77,8 @@ export async function runCLI() {
   }
 }
 
-// If executed directly via bin, run the CLI
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Run automatically only when this file is the direct entrypoint
+const thisFile = fileURLToPath(import.meta.url);
+if (path.resolve(process.argv[1]) === path.resolve(thisFile)) {
   runCLI();
 }

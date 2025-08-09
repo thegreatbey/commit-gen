@@ -1,6 +1,7 @@
 # TypeScript build artifacts
 dist/
 *.tsbuildinfo
+.commit-msg
 
 # Node
 node_modules/

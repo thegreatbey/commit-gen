@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "postbuild": "node scripts/add-shebang.js",
     "dev": "ts-node src/cli.ts",
     "start": "node dist/cli.js",
     "test": "tsx test/smoke.test.ts",
