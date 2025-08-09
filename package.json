@@ -1,6 +1,6 @@
 {
   "name": "@cavani21/commit-genie",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "description": "AI-powered CLI to generate Git commit messages from staged diffs",
   "main": "dist/index.js",
